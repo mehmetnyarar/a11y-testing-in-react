@@ -1,0 +1,12 @@
+@import "../../styles/variables.scss";
+
+.link {
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-primary-active;
+  }
+}

@@ -1,0 +1,11 @@
+@import "../../styles/variables.scss";
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+
+  span,
+  input {
+    margin-bottom: $space-sm;
+  }
+}

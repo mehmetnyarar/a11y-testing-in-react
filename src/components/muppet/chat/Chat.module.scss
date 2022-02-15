@@ -1,0 +1,62 @@
+@import "../../../styles/variables.scss";
+
+$avatar-size: 3rem;
+
+.launch {
+  align-self: flex-end;
+}
+
+.messages {
+  flex: 1;
+}
+
+.message {
+  margin: $space-sm;
+  text-align: left;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &.user {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+}
+
+.message-image {
+  width: $avatar-size;
+  height: $avatar-size;
+  border-radius: $border-radius-mx;
+  border: 2px solid $color-primary-dark;
+  margin: 0;
+  margin-right: $space-sm;
+  background: $color-primary-light;
+
+  &.user {
+    border: 2px solid $color-grey-33;
+    margin: 0;
+    margin-left: $space-sm;
+    background: $color-grey-99;
+  }
+}
+
+.message-text {
+  flex: 1;
+}
+
+.footer {
+  padding: $space-md;
+  background: $color-bg-grey;
+  border-top: 1px solid $color-border;
+
+  display: flex;
+  flex-direction: row;
+
+  input {
+    flex: 1;
+    margin-right: $space-md;
+    border-radius: 0;
+  }
+}

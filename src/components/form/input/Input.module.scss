@@ -1,0 +1,8 @@
+@import "../../../styles/variables.scss";
+
+.default {
+  padding: $space-sm $space-md;
+  border-radius: $border-radius-sm;
+  border: 1px solid $color-border-dark;
+  background: $color-bg;
+}
