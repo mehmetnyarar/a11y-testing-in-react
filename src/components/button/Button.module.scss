@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+
+.default {
+  cursor: pointer;
+
+  padding: $space-sm $space-md;
+  border-radius: $border-radius-sm;
+  border: 1px solid $color-border-dark;
+  background: $color-grey-11;
+  color: $color-grey-ee;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background: $color-grey-33;
+    color: $color-white;
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+
+.container {
+  padding: $space-xl;
+  background: $color-white;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.title {
+  display: block;
+  margin-bottom: $space-xl;
+
+  font-size: $font-hg;
+  font-weight: bold;
+}

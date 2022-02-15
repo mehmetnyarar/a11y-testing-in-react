@@ -17,3 +17,15 @@ Ways to test accessibility in React applications.
 | yarn test       | Runs tests                       |
 | yarn precm      | Checks for the issues            |
 | yarn cm         | Commits changes                  |
+
+## Accessibility Audit
+
+### Before
+
+Lighthouse:
+
+![Lighthouse a11y audit](./docs/reports/before/lighthouse.png)
+
+Axe:
+
+![Axe a11y audit](./docs/reports/before/axe-dev-tools.png)

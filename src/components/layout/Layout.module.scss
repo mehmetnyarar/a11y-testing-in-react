@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+
+.header {
+  padding: $space-xl;
+  background: $color-bg-grey;
+  border-bottom: 1px solid $color-border;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  color: $color-black;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-grey-33;
+  }
+
+  font-weight: normal;
+  font-size: $font-xl;
+}
+
+.footer {
+  padding: $space-xl;
+  background: $color-bg-grey;
+  border-top: 1px solid $color-border;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.footer-copy {
+  font-size: smaller;
+  color: $color-grey-99;
+}
+
+.footer-contact {
+  font-style: italic;
+
+  display: flex;
+  flex-direction: column;
+}
