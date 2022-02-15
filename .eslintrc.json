@@ -24,6 +24,14 @@
         "jest": true,
         "jest/globals": true
       }
+    },
+    {
+      "files": ["**/cypress/**/*.[jt]s?(x)"],
+      "plugins": ["cypress"],
+      "extends": ["plugin:cypress/recommended"],
+      "env": {
+        "cypress/globals": true
+      }
     }
   ]
 }
