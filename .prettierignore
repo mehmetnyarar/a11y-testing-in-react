@@ -3,3 +3,4 @@ coverage
 .next
 build
 storybook-static
+.lighthouseci
