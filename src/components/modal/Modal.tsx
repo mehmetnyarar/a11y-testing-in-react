@@ -1,5 +1,6 @@
 import React from "react";
 
+import { useA11yChecker } from "../../hooks/a11y";
 import { Button } from "../button";
 import styles from "./Modal.module.scss";
 import { Portal } from "./Portal";
@@ -16,6 +17,8 @@ export const Modal: React.FC<ModalProps> = ({
   onClose,
   children,
 }) => {
+  useA11yChecker({ skip: !isOpen });
+
   return (
     <Portal>
       {isOpen && (
