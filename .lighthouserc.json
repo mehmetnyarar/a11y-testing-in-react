@@ -1,0 +1,12 @@
+{
+  "ci": {
+    "collect": {
+      "url": ["http:localhost:3000"],
+      "startServerCommand": "yarn start",
+      "startServerReadyPattern": "lighthouse a11y check",
+      "settings": {
+        "onlyCategories": ["accessibility"]
+      }
+    }
+  }
+}
