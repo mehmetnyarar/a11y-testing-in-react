@@ -1,7 +1,11 @@
 import cn from "classnames";
-import React from "react";
+import React, { KeyboardEvent } from "react";
 
 import styles from "./Button.module.scss";
+
+const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>, fn?: () => void) => {
+  if (e.key === "Enter") fn?.();
+};
 
 interface ButtonProps {
   className?: string;
@@ -17,6 +21,7 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <div
+      onKeyDown={isDisabled ? undefined : e => handleKeyDown(e, onClick)}
       onClick={isDisabled ? undefined : onClick}
       className={cn(styles.default, className)}>
       {children}
