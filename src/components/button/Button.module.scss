@@ -3,6 +3,7 @@
 .default {
   cursor: pointer;
 
+  outline: 0;
   padding: $space-sm $space-md;
   border-radius: $border-radius-sm;
   border: 1px solid $color-border-dark;
@@ -14,8 +15,21 @@
   justify-content: center;
   align-items: center;
 
+  &:focus,
   &:hover {
-    background: $color-grey-33;
+    border: 1px solid $color-primary-active;
+    background: $color-primary-dark;
     color: $color-white;
+  }
+
+  &:disabled {
+    border: 1px solid $color-border;
+    background: $color-grey-cc;
+    color: $color-grey-55;
+
+    &:focus,
+    &:hover {
+      border: 1px solid $color-primary-active;
+    }
   }
 }

@@ -11,25 +11,25 @@ interface LayoutProps {}
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
-      <div className={styles.header}>
+      <header className={styles.header}>
         <Link href={home.path} className={styles["header-title"]}>
           {app.title}
         </Link>
-      </div>
+      </header>
 
       {children}
 
-      <div className={styles.footer}>
+      <footer className={styles.footer}>
         <div className={styles["footer-copy"]}>
           <span>{app.copy}</span>
         </div>
         <Subscribe />
         <div className={styles["footer-contact"]}>
-          <strong>Contact</strong>
+          <h2>Contact</h2>
           <span>{app.contact.phone}</span>
           <span>{app.contact.address}</span>
         </div>
-      </div>
+      </footer>
     </>
   );
 };

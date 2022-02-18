@@ -7,6 +7,7 @@ export const data: Muppet[] = [
     slug: "cookie-monster",
     img: {
       url: "https://static.wikia.nocookie.net/muppet/images/0/08/CookieMonsterWaving.jpg",
+      description: "Cookie Monster",
     },
     info: [
       {

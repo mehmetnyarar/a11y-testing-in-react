@@ -1,6 +1,8 @@
+@import "../../styles/media.scss";
 @import "../../styles/variables.scss";
 
 .header {
+  height: $header-height;
   padding: $space-xl;
   background: $color-bg-grey;
   border-bottom: 1px solid $color-border;
@@ -32,11 +34,21 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
+
+  @include media-sm {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
 }
 
 .footer-copy {
   font-size: smaller;
-  color: $color-grey-99;
+  color: $color-grey-33;
+
+  @include media-sm {
+    margin-top: $space-md;
+  }
 }
 
 .footer-contact {
@@ -44,4 +56,8 @@
 
   display: flex;
   flex-direction: column;
+
+  @include media-sm {
+    margin-bottom: $space-md;
+  }
 }

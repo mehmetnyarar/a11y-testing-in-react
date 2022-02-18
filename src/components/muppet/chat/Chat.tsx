@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 
 import { MuppetChat, MuppetMessage } from "../../../data/muppets";
 import { Button } from "../../button";
@@ -16,6 +16,8 @@ interface ChatProps {
 
 export const Chat: React.FC<ChatProps> = ({ name, data }) => {
   const { initialMessage, responses } = data;
+
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<MuppetMessage[]>([]);
@@ -51,6 +53,7 @@ export const Chat: React.FC<ChatProps> = ({ name, data }) => {
     setTimeout(() => {
       setMessages(items => items.concat(responses[0]));
       setIsBusy(true);
+      inputRef.current?.focus();
     }, RESPONSE_DELAY);
   }, [message, responses]);
 
@@ -76,8 +79,16 @@ export const Chat: React.FC<ChatProps> = ({ name, data }) => {
           ))}
         </div>
         <div className={styles.footer}>
-          <Input value={message} onChange={value => setMessage(value)} />
-          <Button onClick={sendMessage} isDisabled={!canSend}>
+          <Input
+            ref={inputRef}
+            id="user-message"
+            labelHidden
+            label="Message"
+            placeholder="Your message..."
+            value={message}
+            onChange={value => setMessage(value)}
+          />
+          <Button onClick={sendMessage} disabled={!canSend}>
             SEND
           </Button>
         </div>

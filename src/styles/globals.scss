@@ -5,10 +5,17 @@
 @import "~sanitize.css/reduce-motion.css";
 @import "~sanitize.css/system-ui.css";
 @import "~sanitize.css/ui-monospace.css";
+@import "./variables.scss";
 
 #__next {
   min-height: 100vh;
 
   display: flex;
   flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 $space-xs 0;
 }
