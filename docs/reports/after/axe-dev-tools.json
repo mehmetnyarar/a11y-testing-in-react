@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/",
+  "extensionVersion": "4.22.1",
+  "axeVersion": "4.3.5",
+  "standard": "WCAG 2.1 AAA",
+  "testingStartDate": "2022-02-17T16:06:13.903Z",
+  "testingEndDate": "2022-02-17T16:06:13.903Z",
+  "bestPracticesEnabled": true,
+  "issueSummary": {
+    "critical": 0,
+    "moderate": 0,
+    "minor": 0,
+    "serious": 0,
+    "bestPractices": 0,
+    "needsReview": 0
+  },
+  "igtSummary": [],
+  "failedRules": [],
+  "needsReview": [],
+  "allIssues": []
+}

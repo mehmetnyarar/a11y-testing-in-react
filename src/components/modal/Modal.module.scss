@@ -26,6 +26,7 @@ $container-width: 360px;
 }
 
 .header {
+  height: $header-height;
   padding: $space-md;
   background: $color-bg-grey;
   border-bottom: 1px solid $color-border;

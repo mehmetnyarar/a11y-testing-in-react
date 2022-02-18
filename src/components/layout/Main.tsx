@@ -10,9 +10,9 @@ interface MainProps {
 
 export const Main: React.FC<MainProps> = ({ title, center, children }) => {
   return (
-    <div className={cn(styles.container, { [styles.center]: center })}>
-      {title && <span className={styles.title}>{title}</span>}
+    <main className={cn(styles.container, { [styles.center]: center })}>
+      {title && <h1 className={styles.title}>{title}</h1>}
       {children}
-    </div>
+    </main>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import { useA11yChecker } from "../../hooks/a11y";
 import { Button } from "../button";
@@ -19,18 +19,30 @@ export const Modal: React.FC<ModalProps> = ({
 }) => {
   useA11yChecker({ skip: !isOpen });
 
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    if (isOpen) {
+      closeButtonRef.current?.focus();
+    }
+  }, [isOpen]);
+
   return (
     <Portal>
       {isOpen && (
         <>
           <div className={styles.backdrop}></div>
-          <div className={styles.container}>
-            <div className={styles.header}>
+          <aside className={styles.container}>
+            <header className={styles.header}>
               <h2>{title}</h2>
-              <Button onClick={onClose}>X</Button>
-            </div>
+              <Button
+                ref={closeButtonRef}
+                aria-label="Close chat"
+                onClick={onClose}>
+                X
+              </Button>
+            </header>
             <div className={styles.content}>{children}</div>
-          </div>
+          </aside>
         </>
       )}
     </Portal>

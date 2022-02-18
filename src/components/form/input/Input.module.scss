@@ -1,5 +1,18 @@
 @import "../../../styles/variables.scss";
 
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: $space-xs;
+
+  &.hidden {
+    display: none;
+  }
+}
+
 .default {
   padding: $space-sm $space-md;
   border-radius: $border-radius-sm;

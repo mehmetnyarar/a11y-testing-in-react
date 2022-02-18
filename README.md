@@ -29,3 +29,13 @@ Lighthouse:
 Axe:
 
 ![Axe a11y audit](./docs/reports/before/axe-dev-tools.png)
+
+### After
+
+Lighthouse:
+
+![Lighthouse a11y audit](./docs/reports/after/lighthouse.png)
+
+Axe:
+
+![Axe a11y audit](./docs/reports/after/axe-dev-tools.png)

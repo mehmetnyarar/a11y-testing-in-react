@@ -15,14 +15,14 @@ export const Details: React.FC<DetailsProps> = ({ data }) => {
 
   return (
     <>
-      <div className={styles.container}>
+      <article className={styles.container}>
         <Image
           src={img.url}
           alt={img.description}
           layout="fill"
           className={styles.image}
         />
-        <div className={styles.info}>
+        <section className={styles.info}>
           {info.map(({ id, text }) => (
             <p key={id}>{text}</p>
           ))}
@@ -31,8 +31,8 @@ export const Details: React.FC<DetailsProps> = ({ data }) => {
               Read more
             </Link>
           )}
-        </div>
-      </div>
+        </section>
+      </article>
 
       {chat && <Chat name={name} data={chat} />}
     </>

@@ -10,8 +10,8 @@ interface ImageProps extends NextImageProps {
 
 export const Image: React.FC<ImageProps> = ({ className, ...imageProps }) => {
   return (
-    <div className={cn(styles.container, className)}>
+    <figure className={cn(styles.container, className)}>
       <NextImage {...imageProps} />
-    </div>
+    </figure>
   );
 };

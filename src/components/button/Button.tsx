@@ -1,30 +1,26 @@
 import cn from "classnames";
-import React, { KeyboardEvent } from "react";
+import React, { ButtonHTMLAttributes, forwardRef } from "react";
 
 import styles from "./Button.module.scss";
 
-const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>, fn?: () => void) => {
-  if (e.key === "Enter") fn?.();
-};
+type HtmlButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-interface ButtonProps {
-  className?: string;
-  isDisabled?: boolean;
-  onClick?(): void;
-}
+interface ButtonProps extends HtmlButtonProps {}
 
-export const Button: React.FC<ButtonProps> = ({
-  className,
-  isDisabled,
-  onClick,
-  children,
-}) => {
-  return (
-    <div
-      onKeyDown={isDisabled ? undefined : e => handleKeyDown(e, onClick)}
-      onClick={isDisabled ? undefined : onClick}
-      className={cn(styles.default, className)}>
-      {children}
-    </div>
-  );
-};
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ type = "button", className, children, ...buttonProps }, ref) => {
+    return (
+      <button
+        ref={ref}
+        type={type}
+        className={cn(styles.default, className)}
+        {...buttonProps}>
+        {children}
+      </button>
+    );
+  }
+);
+
+Button.displayName = "Button";
+
+export { Button };

@@ -7,6 +7,9 @@
       "settings": {
         "onlyCategories": ["accessibility"]
       }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
     }
   }
 }

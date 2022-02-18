@@ -1,9 +1,15 @@
+@import "../../../styles/media.scss";
 @import "../../../styles/variables.scss";
 
 $avatar-size: 3rem;
 
 .launch {
   align-self: flex-end;
+
+  @include media-sm {
+    align-self: unset;
+    margin-top: $space-md;
+  }
 }
 
 .messages {
